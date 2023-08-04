@@ -25,20 +25,20 @@ public class Radio {
 
     public void setToNextStation() {
         int next = currentStation + 1;
-        setCurrentStation(next);
-    }
-
-    public void setToMaxNextStation() {
-        currentStation = 0;
+        if (currentStation < 9) {
+            setCurrentStation(next);
+        } else {
+            currentStation = 0;
+        }
     }
 
     public void setToPrevStation() {
         int priv = currentStation - 1;
-        setCurrentStation(priv);
-    }
-
-    public void setToMinPrevStation() {
-        currentStation = 9;
+        if (currentStation > 0) {
+            setCurrentStation(priv);
+        } else {
+            currentStation = 9;
+        }
     }
 
     public void setCurrentVolume(int newCurrentVolume) {
