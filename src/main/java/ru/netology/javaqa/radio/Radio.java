@@ -1,5 +1,6 @@
 package ru.netology.javaqa.radio;
 
+// New improved Radio
 public class Radio {
     private int currentStation;
 
